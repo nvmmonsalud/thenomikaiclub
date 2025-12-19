@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0c0f17" />
+      <stop offset="100%" stop-color="#131827" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f4b000" />
+      <stop offset="100%" stop-color="#ff7b3d" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="260" cy="200" r="140" fill="rgba(108,196,255,0.18)" />
+  <circle cx="940" cy="120" r="120" fill="rgba(244,176,0,0.16)" />
+  <rect x="80" y="100" width="1040" height="430" rx="26" fill="#0f1422" stroke="rgba(255,255,255,0.08)" />
+  <text x="120" y="220" fill="#e8ecf5" font-family="'Inter', 'Segoe UI', sans-serif" font-size="58" font-weight="700">The Nomikai Club</text>
+  <text x="120" y="280" fill="#a6b2c9" font-family="'Inter', 'Segoe UI', sans-serif" font-size="28">Tokyo Whisky Bars · Vinyl Bars · Nightlife Notes</text>
+  <rect x="120" y="330" width="360" height="8" rx="4" fill="url(#accent)" />
+  <text x="120" y="380" fill="#e8ecf5" font-family="'Inter', 'Segoe UI', sans-serif" font-size="24">Guides, playlists, and itineraries for late nights in Tokyo.</text>
+  <text x="120" y="430" fill="#6cc4ff" font-family="'Inter', 'Segoe UI', sans-serif" font-size="22">thenomikaiclub.com</text>
+</svg>
