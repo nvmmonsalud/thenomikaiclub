@@ -8,8 +8,18 @@
 </head>
 <body>
   <header class="site-header">
-    <div class="logo">The Nomikai Club</div>
-    <nav class="nav-links">
+    <div class="site-header__bar">
+      <div class="logo">The Nomikai Club</div>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+        <span class="menu-toggle__label">Menu</span>
+        <span class="menu-toggle__icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </button>
+    </div>
+    <nav id="site-navigation" class="nav-links">
       <a href="../index.html">Home</a>
       <a href="whisky-bars.html">Whisky Bars</a>
       <a href="vinyl-bars.html">Vinyl Bars</a>
@@ -80,5 +90,7 @@
   <footer class="site-footer">
     <p>Have a bottle to review? Share your tasting notes with <span class="logo-mark">Nomikai Club</span>.</p>
   </footer>
+
+  <script src="../assets/js/main.js"></script>
 </body>
 </html>
