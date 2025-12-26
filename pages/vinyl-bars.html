@@ -40,8 +40,38 @@
       </div>
     </section>
 
+    <div class="filter-controls" data-filter-target="#featured">
+      <div class="filter-controls__intro">
+        <p class="eyebrow">Filter the list</p>
+        <p class="filter-controls__lede">Sort by neighborhood, vibe, or price for your next vinyl-focused night.</p>
+      </div>
+      <div class="filter-controls__inputs">
+        <label class="filter-controls__label" for="vinyl-neighborhood">Neighborhood</label>
+        <select id="vinyl-neighborhood" data-filter="neighborhood">
+          <option value="all">All</option>
+          <option value="shibuya">Shibuya</option>
+          <option value="meguro">Meguro</option>
+          <option value="shimokitazawa">Shimokitazawa</option>
+        </select>
+        <label class="filter-controls__label" for="vinyl-vibe">Vibe</label>
+        <select id="vinyl-vibe" data-filter="vibe">
+          <option value="all">All</option>
+          <option value="hushed">Hushed</option>
+          <option value="classic">Classic</option>
+          <option value="soulful">Soulful</option>
+        </select>
+        <label class="filter-controls__label" for="vinyl-price">Price</label>
+        <select id="vinyl-price" data-filter="price">
+          <option value="all">All</option>
+          <option value="$">$</option>
+          <option value="$$">$$</option>
+        </select>
+        <button class="button secondary filter-controls__reset" type="button" data-filter-reset>Reset</button>
+      </div>
+    </div>
+
     <section id="featured" class="feature-grid">
-      <article class="card">
+      <article class="card" data-neighborhood="shibuya" data-vibe="hushed" data-price="$$">
         <p class="badge">Shibuya</p>
         <h3>Bar Martha</h3>
         <p>Quiet, church-like vinyl temple famed for pristine sound and strict no-phone vibe.</p>
@@ -52,7 +82,7 @@
         </ul>
         <a class="text-link" href="#">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="meguro" data-vibe="classic" data-price="$">
         <p class="badge">Meguro</p>
         <h3>Jazz & Blues Bar JBS</h3>
         <p>Wall-to-wall records curated by owner Kobayashi-san, spinning bebop to hard bop classics.</p>
@@ -63,7 +93,7 @@
         </ul>
         <a class="text-link" href="#">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="shimokitazawa" data-vibe="soulful" data-price="$$">
         <p class="badge">Shimokitazawa</p>
         <h3>Little Soul Cafe</h3>
         <p>Soul and funk haven with an ever-changing playlist and walls of LPs.</p>

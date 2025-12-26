@@ -40,8 +40,45 @@
       </div>
     </section>
 
+    <div class="filter-controls" data-filter-target="#featured">
+      <div class="filter-controls__intro">
+        <p class="eyebrow">Filter the list</p>
+        <p class="filter-controls__lede">Pick a neighborhood, vibe, or price point to refine these whisky counters.</p>
+      </div>
+      <div class="filter-controls__inputs">
+        <label class="filter-controls__label" for="whisky-neighborhood">Neighborhood</label>
+        <select id="whisky-neighborhood" data-filter="neighborhood">
+          <option value="all">All</option>
+          <option value="ginza">Ginza</option>
+          <option value="shinjuku">Shinjuku</option>
+          <option value="roppongi">Roppongi</option>
+          <option value="azabu-juban">Azabu-Juban</option>
+          <option value="shibuya">Shibuya</option>
+          <option value="ebisu">Ebisu</option>
+        </select>
+        <label class="filter-controls__label" for="whisky-vibe">Vibe</label>
+        <select id="whisky-vibe" data-filter="vibe">
+          <option value="all">All</option>
+          <option value="refined">Refined</option>
+          <option value="cinematic">Cinematic</option>
+          <option value="experimental">Experimental</option>
+          <option value="intimate">Intimate</option>
+          <option value="lively">Lively</option>
+          <option value="cozy">Cozy</option>
+        </select>
+        <label class="filter-controls__label" for="whisky-price">Price</label>
+        <select id="whisky-price" data-filter="price">
+          <option value="all">All</option>
+          <option value="$">$</option>
+          <option value="$$">$$</option>
+          <option value="$$$">$$$</option>
+        </select>
+        <button class="button secondary filter-controls__reset" type="button" data-filter-reset>Reset</button>
+      </div>
+    </div>
+
     <section id="featured" class="feature-grid">
-      <article class="card">
+      <article class="card" data-neighborhood="ginza" data-vibe="refined" data-price="$$$">
         <p class="badge">Ginza</p>
         <h3>Bar High Five</h3>
         <p>World-class bartending with a deep Japanese whisky list and precision ice carving.</p>
@@ -52,7 +89,7 @@
         </ul>
         <a class="text-link" href="whisky-bar-high-five.html">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="shinjuku" data-vibe="cinematic" data-price="$$">
         <p class="badge">Shinjuku</p>
         <h3>Zoetrope</h3>
         <p>Hundreds of Japanese bottlings, film-score soundtrack, and owner-curated tastings.</p>
@@ -63,7 +100,7 @@
         </ul>
         <a class="text-link" href="whisky-bar-zoetrope.html">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="roppongi" data-vibe="experimental" data-price="$$$">
         <p class="badge">Roppongi</p>
         <h3>Bar Benfiddich</h3>
         <p>Apothecary-style cocktail lab with single malt treasures and seasonal infusions.</p>
@@ -74,7 +111,7 @@
         </ul>
         <a class="text-link" href="whisky-bar-benfiddich.html">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="azabu-juban" data-vibe="intimate" data-price="$$$">
         <p class="badge">Azabu-Juban</p>
         <h3>Tokyo Confidential</h3>
         <p>Inviting speakeasy tucked off the main street with a thoughtful Japanese whisky edit and polished service.</p>
@@ -85,7 +122,7 @@
         </ul>
         <a class="text-link" href="whisky-bar-tokyo-confidential.html">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="shibuya" data-vibe="lively" data-price="$$">
         <p class="badge">Shibuya</p>
         <h3>SG Club</h3>
         <p>Playful multi-floor bar where inventive cocktails sit alongside well-loved Japanese single malts.</p>
@@ -96,7 +133,7 @@
         </ul>
         <a class="text-link" href="whisky-bar-sg-club.html">Read detailed review →</a>
       </article>
-      <article class="card">
+      <article class="card" data-neighborhood="ebisu" data-vibe="cozy" data-price="$$">
         <p class="badge">Ebisu</p>
         <h3>Bar Trench</h3>
         <p>Intimate European-style hideaway pouring bitters-driven classics and niche Japanese whiskies.</p>
