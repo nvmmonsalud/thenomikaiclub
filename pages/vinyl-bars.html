@@ -78,21 +78,70 @@
 
     <section id="map" class="map-hints">
       <h2>Map & neighborhood hints</h2>
+      <div class="map-visual">
+        <svg class="map-svg" viewBox="0 0 560 260" role="img" aria-label="Stylized map of Tokyo vinyl listening neighborhoods">
+          <defs>
+            <linearGradient id="mapGlowVinyl" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#5a4fff" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#d2b356" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="560" height="260" rx="28" fill="rgba(15, 17, 24, 0.75)" />
+          <path d="M50 210 C150 150, 230 130, 310 140 C390 150, 450 120, 520 90" fill="none" stroke="url(#mapGlowVinyl)" stroke-width="22" stroke-linecap="round" opacity="0.6" />
+          <path class="map-route" d="M90 190 L200 140 L320 140 L420 110" fill="none" />
+          <g class="map-node" transform="translate(95 190)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">1</text>
+          </g>
+          <text class="map-label" x="120" y="196">Shibuya</text>
+          <g class="map-node" transform="translate(205 142)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">2</text>
+          </g>
+          <text class="map-label" x="230" y="148">Shimokitazawa</text>
+          <g class="map-node" transform="translate(320 140)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">3</text>
+          </g>
+          <text class="map-label" x="345" y="146">Koenji</text>
+          <g class="map-node" transform="translate(420 110)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">4</text>
+          </g>
+          <text class="map-label" x="445" y="116">Ikebukuro</text>
+        </svg>
+      </div>
       <div class="map-grid">
         <article class="hint">
-          <h4>Shibuya</h4>
+          <div class="hint-header">
+            <span class="hint-pin">1</span>
+            <h4>Shibuya</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Shibuya+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Walk toward Daikanyama and Kamiyamacho for audiophile lounges with rotary mixers and JBL monitors.</p>
         </article>
         <article class="hint">
-          <h4>Shimokitazawa</h4>
+          <div class="hint-header">
+            <span class="hint-pin">2</span>
+            <h4>Shimokitazawa</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Shimokitazawa+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Record store-lined streets hide upstairs bars; listen for the bass thump and look for narrow staircases.</p>
         </article>
         <article class="hint">
-          <h4>Koenji</h4>
+          <div class="hint-header">
+            <span class="hint-pin">3</span>
+            <h4>Koenji</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Koenji+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Vintage shops spill into late-night bars that mix crate-digging with craft beer taps.</p>
         </article>
         <article class="hint">
-          <h4>Ikebukuro</h4>
+          <div class="hint-header">
+            <span class="hint-pin">4</span>
+            <h4>Ikebukuro</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Ikebukuro+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Seek basement bars near the west exit; many host theme nights from city pop to Latin jazz.</p>
         </article>
       </div>

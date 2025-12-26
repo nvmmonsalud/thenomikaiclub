@@ -111,21 +111,70 @@
 
     <section id="map" class="map-hints">
       <h2>Map & neighborhood hints</h2>
+      <div class="map-visual">
+        <svg class="map-svg" viewBox="0 0 560 260" role="img" aria-label="Stylized map of Tokyo whisky neighborhoods">
+          <defs>
+            <linearGradient id="mapGlowWhisky" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#d2b356" stop-opacity="0.4" />
+              <stop offset="100%" stop-color="#5a4fff" stop-opacity="0.2" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="560" height="260" rx="28" fill="rgba(15, 17, 24, 0.75)" />
+          <path d="M60 200 C140 150, 240 120, 320 130 C400 140, 460 120, 520 80" fill="none" stroke="url(#mapGlowWhisky)" stroke-width="22" stroke-linecap="round" opacity="0.6" />
+          <path class="map-route" d="M90 190 L210 130 L330 125 L430 95" fill="none" />
+          <g class="map-node" transform="translate(95 185)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">1</text>
+          </g>
+          <text class="map-label" x="120" y="191">Ginza</text>
+          <g class="map-node" transform="translate(215 132)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">2</text>
+          </g>
+          <text class="map-label" x="240" y="138">Shinjuku</text>
+          <g class="map-node" transform="translate(335 125)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">3</text>
+          </g>
+          <text class="map-label" x="360" y="131">Asakusa</text>
+          <g class="map-node" transform="translate(430 95)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">4</text>
+          </g>
+          <text class="map-label" x="455" y="101">Ebisu</text>
+        </svg>
+      </div>
       <div class="map-grid">
         <article class="hint">
-          <h4>Ginza / Yurakucho</h4>
+          <div class="hint-header">
+            <span class="hint-pin">1</span>
+            <h4>Ginza / Yurakucho</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Ginza+Yurakucho+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Search above department stores and along backstreets near Sukiyabashi for speakeasy-style counters.</p>
         </article>
         <article class="hint">
-          <h4>Shinjuku Golden Gai</h4>
+          <div class="hint-header">
+            <span class="hint-pin">2</span>
+            <h4>Shinjuku Golden Gai</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Shinjuku+Golden+Gai+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Use the narrow alleys; many whisky bars sit on the second floor with small neon plaques.</p>
         </article>
         <article class="hint">
-          <h4>Asakusa</h4>
+          <div class="hint-header">
+            <span class="hint-pin">3</span>
+            <h4>Asakusa</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Asakusa+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Retro lounges cluster around Kappabashi Street—look for wood signs and single malt banners.</p>
         </article>
         <article class="hint">
-          <h4>Ebisu</h4>
+          <div class="hint-header">
+            <span class="hint-pin">4</span>
+            <h4>Ebisu</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Ebisu+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Basements near Ebisu Station often hide intimate whisky libraries with English-friendly menus.</p>
         </article>
       </div>

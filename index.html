@@ -57,21 +57,70 @@
 
     <section id="map" class="map-hints">
       <h3>Map & neighborhood hints</h3>
+      <div class="map-visual">
+        <svg class="map-svg" viewBox="0 0 560 260" role="img" aria-label="Stylized map of Tokyo nightlife neighborhoods">
+          <defs>
+            <linearGradient id="mapGlowHome" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#5a4fff" stop-opacity="0.35" />
+              <stop offset="100%" stop-color="#d2b356" stop-opacity="0.25" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="560" height="260" rx="28" fill="rgba(15, 17, 24, 0.75)" />
+          <path d="M40 210 C140 160, 220 120, 320 130 C390 140, 450 110, 520 70" fill="none" stroke="url(#mapGlowHome)" stroke-width="22" stroke-linecap="round" opacity="0.6" />
+          <path class="map-route" d="M80 190 L190 130 L310 120 L420 90" fill="none" />
+          <g class="map-node" transform="translate(90 180)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">1</text>
+          </g>
+          <text class="map-label" x="115" y="186">Ginza</text>
+          <g class="map-node" transform="translate(210 130)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">2</text>
+          </g>
+          <text class="map-label" x="235" y="136">Shinjuku</text>
+          <g class="map-node" transform="translate(315 120)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">3</text>
+          </g>
+          <text class="map-label" x="340" y="126">Shibuya</text>
+          <g class="map-node" transform="translate(420 90)">
+            <circle r="14" />
+            <text text-anchor="middle" dy="4">4</text>
+          </g>
+          <text class="map-label" x="445" y="96">Ebisu</text>
+        </svg>
+      </div>
       <div class="map-grid">
         <article class="hint">
-          <h4>Ginza</h4>
+          <div class="hint-header">
+            <span class="hint-pin">1</span>
+            <h4>Ginza</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Ginza+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Find bar clusters tucked above street level along Namiki-dori and showrooms near Yurakucho.</p>
         </article>
         <article class="hint">
-          <h4>Shinjuku</h4>
+          <div class="hint-header">
+            <span class="hint-pin">2</span>
+            <h4>Shinjuku</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Shinjuku+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Golden Gai’s narrow alleys hide tiny whisky counters and vinyl dens with themed playlists.</p>
         </article>
         <article class="hint">
-          <h4>Shibuya</h4>
+          <div class="hint-header">
+            <span class="hint-pin">3</span>
+            <h4>Shibuya</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Shibuya+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Walk from Dogenzaka to Kamiyamacho for audiophile bars with rotary mixers and vintage JBLs.</p>
         </article>
         <article class="hint">
-          <h4>Ebisu</h4>
+          <div class="hint-header">
+            <span class="hint-pin">4</span>
+            <h4>Ebisu</h4>
+            <a class="map-link" href="https://www.google.com/maps/search/Ebisu+Tokyo" target="_blank" rel="noreferrer">Open map</a>
+          </div>
           <p>Cozy basements around Ebisu Garden Place pair rare single malts with soulful jazz nights.</p>
         </article>
       </div>
