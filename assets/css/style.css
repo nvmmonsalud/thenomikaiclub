@@ -319,6 +319,59 @@ ul {
   font-family: 'Space Grotesk', 'Inter', sans-serif;
 }
 
+.profile-bars {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 12px;
+}
+
+.profile-bar {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.profile-bar__label {
+  font-weight: 600;
+}
+
+.profile-bar__track {
+  position: relative;
+  height: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.profile-bar__fill {
+  position: absolute;
+  inset: 0;
+  width: calc(var(--score, 0) * 100%);
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(210, 179, 86, 0.9), rgba(90, 79, 255, 0.9));
+  box-shadow: 0 0 12px rgba(210, 179, 86, 0.35);
+}
+
+.rating-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(210, 179, 86, 0.4);
+  background: rgba(210, 179, 86, 0.12);
+  color: var(--accent-soft);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 .details {
   padding-left: 18px;
   margin: 10px 0 14px;
