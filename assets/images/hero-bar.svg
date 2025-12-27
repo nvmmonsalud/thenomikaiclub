@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Tokyo whisky bar glow</title>
+  <desc id="desc">A stylized illustration of a softly lit whisky bar with a glass and vinyl record glow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#0f1118" />
+      <stop offset="100%" stop-color="#2b1d3a" />
+    </linearGradient>
+    <linearGradient id="bar" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0%" stop-color="#3d2a1b" />
+      <stop offset="100%" stop-color="#6c4a2c" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="40%" r="45%">
+      <stop offset="0%" stop-color="#f0c36b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#f0c36b" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#bg)" />
+  <circle cx="640" cy="180" r="180" fill="url(#glow)" />
+  <rect x="0" y="380" width="900" height="220" fill="url(#bar)" />
+  <rect x="80" y="320" width="740" height="30" rx="15" fill="#1c1410" opacity="0.7" />
+  <circle cx="220" cy="450" r="90" fill="#13131c" stroke="#5a4fff" stroke-width="6" />
+  <circle cx="220" cy="450" r="20" fill="#5a4fff" />
+  <rect x="520" y="290" width="140" height="200" rx="20" fill="#f7d08a" opacity="0.2" />
+  <rect x="540" y="270" width="100" height="40" rx="20" fill="#c58b4f" />
+  <rect x="545" y="310" width="90" height="140" rx="18" fill="#f0c36b" opacity="0.7" />
+  <rect x="560" y="360" width="60" height="60" rx="12" fill="#d08b4c" />
+  <rect x="60" y="120" width="160" height="90" rx="18" fill="#1b1f2c" stroke="#f0c36b" stroke-width="2" />
+  <text x="140" y="175" fill="#f0c36b" font-family="'Trebuchet MS', sans-serif" font-size="18" text-anchor="middle">NOMIKAI</text>
+</svg>
