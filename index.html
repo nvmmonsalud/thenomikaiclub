@@ -21,6 +21,7 @@
     </div>
     <nav id="site-navigation" class="nav-links">
       <a href="index.html">Home</a>
+      <a href="#planner">Night Planner</a>
       <a href="pages/whisky-bars.html">Whisky Bars</a>
       <a href="pages/vinyl-bars.html">Vinyl Bars</a>
       <a href="pages/whisky-reviews.html">Whisky Reviews</a>
@@ -86,6 +87,74 @@
           <p>Small rooms where bartenders and DJs craft the tempo.</p>
         </div>
       </article>
+    </section>
+
+    <section id="planner" class="planner" aria-labelledby="planner-title">
+      <div class="planner-header">
+        <p class="eyebrow">Night crawl planner</p>
+        <h3 id="planner-title">Build a personalized Tokyo night in minutes</h3>
+        <p class="lede">
+          Pick your focus, pace, and start time to create a custom crawl with the right energy.
+        </p>
+      </div>
+      <div class="planner-grid">
+        <form class="planner-form" aria-label="Night crawl planner">
+          <div class="planner-field">
+            <span class="planner-label">Focus</span>
+            <div class="planner-options" data-planner-group="focus">
+              <button class="option-button is-active" type="button" data-value="whisky">Whisky-forward</button>
+              <button class="option-button" type="button" data-value="balanced">Balanced mix</button>
+              <button class="option-button" type="button" data-value="vinyl">Vinyl-forward</button>
+            </div>
+          </div>
+          <div class="planner-field">
+            <label class="planner-label" for="planner-time">Start time</label>
+            <select id="planner-time" data-planner-time>
+              <option value="early">18:30 - early aperitif</option>
+              <option value="classic" selected>19:30 - classic start</option>
+              <option value="late">20:30 - late-night entry</option>
+            </select>
+          </div>
+          <div class="planner-field">
+            <label class="planner-label" for="planner-pace">Pace</label>
+            <select id="planner-pace" data-planner-pace>
+              <option value="slow">Slow & savoring</option>
+              <option value="steady" selected>Steady crawl</option>
+              <option value="sprint">Late-night sprint</option>
+            </select>
+          </div>
+          <div class="planner-field">
+            <label class="planner-label" for="planner-group">Group size</label>
+            <select id="planner-group" data-planner-group-size>
+              <option value="solo">1-2 people</option>
+              <option value="small" selected>3-4 people</option>
+              <option value="large">5+ people</option>
+            </select>
+          </div>
+        </form>
+        <div class="planner-output" aria-live="polite">
+          <div class="planner-card">
+            <p class="badge">Suggested route</p>
+            <h4 data-planner-title>Ginza whisky salons + vinyl detour</h4>
+            <ol class="planner-steps" data-planner-steps>
+              <li>Start with a highball flight in Ginza.</li>
+              <li>Shift to Shibuya for a listening bar session.</li>
+              <li>Finish in Ebisu with a rare single malt.</li>
+            </ol>
+            <p class="planner-note" data-planner-note>
+              19:30 start · Steady crawl · Book a four-seat counter in advance.
+            </p>
+          </div>
+          <div class="planner-tip">
+            <h4>Pro tip</h4>
+            <p>Mix reservations with walk-ins. Aim for one booked bar and two spontaneous stops.</p>
+            <div class="planner-links">
+              <a class="text-link" href="pages/whisky-bars.html">Browse whisky picks →</a>
+              <a class="text-link" href="pages/vinyl-bars.html">Browse vinyl picks →</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section id="map" class="map-hints">
