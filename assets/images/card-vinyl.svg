@@ -1,0 +1,20 @@
+<svg width="800" height="450" viewBox="0 0 800 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pulse" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5a4fff"/>
+      <stop offset="1" stop-color="#34d4ff"/>
+    </linearGradient>
+    <radialGradient id="ring" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(320 220) rotate(90) scale(200)">
+      <stop stop-color="#ffffff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#0d0c12" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="800" height="450" fill="#14131f"/>
+  <rect width="800" height="450" fill="url(#pulse)" opacity="0.18"/>
+  <circle cx="320" cy="220" r="150" fill="url(#ring)"/>
+  <circle cx="320" cy="220" r="110" stroke="#ada6c3" stroke-opacity="0.4" stroke-width="10"/>
+  <circle cx="320" cy="220" r="70" stroke="#ada6c3" stroke-opacity="0.3" stroke-width="6"/>
+  <circle cx="320" cy="220" r="24" fill="#d2b356" opacity="0.8"/>
+  <path d="M520 120 L720 80" stroke="#d2b356" stroke-opacity="0.5" stroke-width="6"/>
+  <path d="M520 120 L540 200" stroke="#d2b356" stroke-opacity="0.5" stroke-width="6"/>
+</svg>
