@@ -470,6 +470,54 @@ ul {
   background: linear-gradient(120deg, rgba(90, 79, 255, 0.18), rgba(255, 255, 255, 0.02));
 }
 
+.filter-controls {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow);
+}
+
+.filter-controls__intro {
+  max-width: 360px;
+}
+
+.filter-controls__lede {
+  color: var(--muted);
+  margin: 6px 0 0;
+}
+
+.filter-controls__inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.filter-controls__label {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.filter-controls select {
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(15, 15, 15, 0.6);
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.filter-controls__reset {
+  white-space: nowrap;
+}
+
 .feature-grid {
   margin-top: 34px;
   display: grid;

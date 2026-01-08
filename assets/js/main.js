@@ -163,4 +163,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updatePlanner();
   }
+
+  filterBlocks.forEach(block => {
+    const targetSelector = block.getAttribute('data-filter-target');
+    const target = targetSelector ? document.querySelector(targetSelector) : null;
+    if (!target) {
+      return;
+    }
+
+    const selects = block.querySelectorAll('select[data-filter]');
+    const resetButton = block.querySelector('[data-filter-reset]');
+    const cards = target.querySelectorAll('.card');
+
+    const applyFilters = () => {
+      const activeFilters = Array.from(selects).reduce((filters, select) => {
+        const filterValue = select.value;
+        if (filterValue && filterValue !== 'all') {
+          filters[select.dataset.filter] = filterValue;
+        }
+        return filters;
+      }, {});
+
+      cards.forEach(card => {
+        const matches = Object.entries(activeFilters).every(([key, value]) => {
+          const cardValue = card.dataset[key];
+          if (!cardValue) {
+            return false;
+          }
+          return cardValue.split(',').map(item => item.trim()).includes(value);
+        });
+
+        card.hidden = !matches && Object.keys(activeFilters).length > 0;
+      });
+    };
+
+    selects.forEach(select => {
+      select.addEventListener('change', applyFilters);
+    });
+
+    if (resetButton) {
+      resetButton.addEventListener('click', () => {
+        selects.forEach(select => {
+          select.value = 'all';
+        });
+        applyFilters();
+      });
+    }
+  });
 });
