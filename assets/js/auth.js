@@ -17,6 +17,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Social Login Buttons
+  const googleBtn = document.getElementById('google-login-btn');
+  if (googleBtn) {
+    googleBtn.addEventListener('click', () => mockLogin('google'));
+  }
+
+  const appleBtn = document.getElementById('apple-login-btn');
+  if (appleBtn) {
+    appleBtn.addEventListener('click', () => mockLogin('apple'));
+  }
+
+  // Signup Link
+  const signupLink = document.getElementById('signup-link');
+  if (signupLink) {
+    signupLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      alert('Sign up coming soon!');
+    });
+  }
+
   checkLoginStatus();
 });
 

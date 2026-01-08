@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';" />
   <title>Sign In | The Nomikai Club</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -36,7 +37,7 @@
         <p class="auth-subtitle">Sign in to save your night plans and reviews.</p>
 
         <div class="social-login">
-          <button class="button social-btn google-btn" onclick="mockLogin('google')">
+          <button id="google-login-btn" class="button social-btn google-btn">
             <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
@@ -46,7 +47,7 @@
             Sign in with Google
           </button>
 
-          <button class="button social-btn apple-btn" onclick="mockLogin('apple')">
+          <button id="apple-login-btn" class="button social-btn apple-btn">
              <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
                 <path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24.02-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.78 1.18-.19 2.31-.89 3.51-.84 1.54.06 2.77.74 3.69 1.81-3.67 1.89-3.08 6.81.4 8.16-.31 1.07-.85 2.14-1.63 3.06H17.05zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
             </svg>
@@ -73,7 +74,7 @@
         </form>
 
         <p class="auth-footer">
-          Don't have an account? <a href="#" onclick="alert('Sign up coming soon!')">Sign up</a>
+          Don't have an account? <a href="#" id="signup-link">Sign up</a>
         </p>
       </div>
     </section>
