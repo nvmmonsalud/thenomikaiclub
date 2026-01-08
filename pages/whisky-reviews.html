@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' https://images.unsplash.com data:; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self';" />
   <title>Whisky Reviews | The Nomikai Club</title>
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -21,28 +22,71 @@
     </div>
     <nav id="site-navigation" class="nav-links">
       <a href="../index.html">Home</a>
+      <a href="../index.html#planner">Night Planner</a>
       <a href="whisky-bars.html">Whisky Bars</a>
       <a href="vinyl-bars.html">Vinyl Bars</a>
       <a class="active" href="whisky-reviews.html">Whisky Reviews</a>
+      <a href="signin.html">Sign In</a>
     </nav>
   </header>
 
   <main class="landing">
     <section class="page-hero whisky">
-      <div>
+      <div class="page-hero__content">
         <p class="eyebrow">Whisky Reviews</p>
         <h1>Tasting notes for iconic Japanese pours</h1>
         <p class="lede">From deep oak to incense-like smoke, these flagship releases offer layered, slow-sipping experiences.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#reviews">Featured reviews</a>
+          <a class="button secondary" href="whisky-bars.html">Visit whisky bars</a>
+        </div>
       </div>
-      <div class="hero-actions">
-        <a class="button primary" href="#reviews">Featured reviews</a>
-        <a class="button secondary" href="whisky-bars.html">Visit whisky bars</a>
+      <div class="hero-media">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=900&q=80" alt="Notebook and whisky glass set for tasting notes" loading="lazy">
+        <span class="hero-media__label">Tasting notes</span>
       </div>
+    </section>
+
+    <section class="spotlight-grid" aria-label="Whisky tasting accents">
+      <article class="spotlight-card">
+        <img src="https://images.unsplash.com/photo-1470337458703-46ad1756a187?auto=format&fit=crop&w=800&q=80" alt="Whisky glass catching warm light" loading="lazy">
+        <div>
+          <p class="eyebrow">Glassware</p>
+          <h3>Amber clarity</h3>
+          <p>Shape and aroma guide each sip in the tasting flight.</p>
+        </div>
+      </article>
+      <article class="spotlight-card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" alt="Bottle and tasting journal on a bar counter" loading="lazy">
+        <div>
+          <p class="eyebrow">Tasting Journal</p>
+          <h3>Layered notes</h3>
+          <p>Oak, stone fruit, and smoke captured in nightly reviews.</p>
+        </div>
+      </article>
+      <article class="spotlight-card">
+        <img src="https://images.unsplash.com/photo-1514361892635-6a8e7e0c45c3?auto=format&fit=crop&w=800&q=80" alt="Whisky bottle with soft bokeh lights" loading="lazy">
+        <div>
+          <p class="eyebrow">House Picks</p>
+          <h3>Rare release shelves</h3>
+          <p>Limited pours highlighted for collectors and newcomers alike.</p>
+        </div>
+      </article>
     </section>
 
     <section id="reviews" class="feature-grid">
       <article class="card">
-        <p class="badge">Suntory</p>
+        <div class="card-media card-media--masked">
+          <img src="../assets/images/card-review.svg" alt="Abstract whisky review artwork">
+        </div>
+        <div class="card-meta">
+          <p class="badge">Suntory</p>
+          <div class="chip-group">
+            <span class="chip">Sherry cask</span>
+            <span class="chip">Luxury</span>
+            <span class="chip">18 years</span>
+          </div>
+        </div>
         <h3>Yamazaki 18 Year</h3>
         <p>Dark fruit, leather, and sherry-soaked oak with a long, luxurious finish.</p>
         <ul class="details">
@@ -50,10 +94,34 @@
           <li>Palate: Bitter chocolate, clove, toasted oak</li>
           <li>Finish: Lingering spice, sandalwood warmth</li>
         </ul>
-        <p class="text-link">Rating: 95/100</p>
+        <div class="profile-bars" aria-label="Flavor profile">
+          <div class="profile-bar" style="--score: 0.65;">
+            <span class="profile-bar__label">Smoke</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.9;">
+            <span class="profile-bar__label">Fruit</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.95;">
+            <span class="profile-bar__label">Oak</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+        </div>
+        <span class="rating-badge">Rating 95/100</span>
       </article>
       <article class="card">
-        <p class="badge">Suntory</p>
+        <div class="card-media card-media--masked">
+          <img src="../assets/images/card-review.svg" alt="Abstract whisky review artwork">
+        </div>
+        <div class="card-meta">
+          <p class="badge">Suntory</p>
+          <div class="chip-group">
+            <span class="chip">Limited</span>
+            <span class="chip">Collector</span>
+            <span class="chip">30 years</span>
+          </div>
+        </div>
         <h3>Hibiki 30 Year</h3>
         <p>Silken blend of aged malt and grain with honeyed florals and incense.</p>
         <ul class="details">
@@ -61,10 +129,34 @@
           <li>Palate: Dried apricot, orange marmalade, soft peat</li>
           <li>Finish: Long, perfumed, meditative</li>
         </ul>
-        <p class="text-link">Rating: 97/100</p>
+        <div class="profile-bars" aria-label="Flavor profile">
+          <div class="profile-bar" style="--score: 0.35;">
+            <span class="profile-bar__label">Smoke</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.95;">
+            <span class="profile-bar__label">Fruit</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.8;">
+            <span class="profile-bar__label">Oak</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+        </div>
+        <span class="rating-badge">Rating 97/100</span>
       </article>
       <article class="card">
-        <p class="badge">Suntory</p>
+        <div class="card-media card-media--masked">
+          <img src="../assets/images/card-review.svg" alt="Abstract whisky review artwork">
+        </div>
+        <div class="card-meta">
+          <p class="badge">Suntory</p>
+          <div class="chip-group">
+            <span class="chip">Smoky</span>
+            <span class="chip">Forest</span>
+            <span class="chip">18 years</span>
+          </div>
+        </div>
         <h3>Hakushu 18 Year</h3>
         <p>Forest-fresh malt with green herbs, citrus peel, and wisps of smoke.</p>
         <ul class="details">
@@ -72,7 +164,21 @@
           <li>Palate: Pear, white pepper, gentle smoke</li>
           <li>Finish: Crisp, mineral, cool smoke trail</li>
         </ul>
-        <p class="text-link">Rating: 94/100</p>
+        <div class="profile-bars" aria-label="Flavor profile">
+          <div class="profile-bar" style="--score: 0.8;">
+            <span class="profile-bar__label">Smoke</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.7;">
+            <span class="profile-bar__label">Fruit</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+          <div class="profile-bar" style="--score: 0.6;">
+            <span class="profile-bar__label">Oak</span>
+            <span class="profile-bar__track"><span class="profile-bar__fill"></span></span>
+          </div>
+        </div>
+        <span class="rating-badge">Rating 94/100</span>
       </article>
     </section>
 
@@ -92,5 +198,6 @@
   </footer>
 
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
 </body>
 </html>
