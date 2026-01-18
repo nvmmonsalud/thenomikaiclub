@@ -164,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePlanner();
   }
 
+  const filterBlocks = document.querySelectorAll('.filter-controls');
   filterBlocks.forEach(block => {
     const targetSelector = block.getAttribute('data-filter-target');
     const target = targetSelector ? document.querySelector(targetSelector) : null;

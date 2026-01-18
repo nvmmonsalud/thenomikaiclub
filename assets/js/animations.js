@@ -1,3 +1,9 @@
+/**
+ * 🛡️ Sentinel: Animation Logic
+ * Handles scroll-triggered reveals and staggered animations.
+ * Ensures content becomes visible when entering the viewport.
+ */
+
 document.addEventListener('DOMContentLoaded', () => {
   // Reveal on scroll
   const observerOptions = {
