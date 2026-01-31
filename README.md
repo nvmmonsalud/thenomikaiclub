@@ -43,6 +43,49 @@ Since there are no dependencies or build scripts, you can run this project simpl
 2.  Open `index.html` in your preferred web browser.
 3.  Navigate through the site to explore bars and test the planner.
 
+## Supabase + Next.js Backend Scaffold
+
+This repository now includes a production-ready Supabase schema (migrations, RLS policies, storage policies, and seed data) plus a minimal Next.js App Router integration.
+
+### Local Supabase setup
+
+1.  Install the Supabase CLI.
+2.  Start Supabase locally:
+
+    ```bash
+    supabase start
+    ```
+
+3.  Apply migrations and seed data:
+
+    ```bash
+    supabase db reset
+    ```
+
+4.  Copy the environment template and fill in your keys (from `supabase status`):
+
+    ```bash
+    cp .env.local.example .env.local
+    ```
+
+### Run the Next.js app
+
+```bash
+npm install
+npm run dev
+```
+
+The App Router UI demonstrates:
+
+* Public read of bars and posts.
+* Email/password login + registration.
+* Authenticated review creation with optional image upload.
+
+### Supabase files
+
+* `supabase/migrations/` contains the schema, RLS policies, helper functions, and storage setup.
+* `supabase/seed.sql` seeds sample bars and posts for local development.
+
 ## Development & Maintenance
 
 *   **Navigation:** The navigation menu is hardcoded in every HTML file. If you modify the menu in `index.html`, you **must** manually update it in all files within the `pages/` directory to ensure consistency.
